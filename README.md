@@ -1,7 +1,7 @@
 <h1 align="center">DaftarYuk (Sistem Pendaftaran Kegiatan Mahasiswa)</h1>
 
 <p align="center">
-  <img src="Logo Unsulbar.jpg" width="200" alt="Logo Unsulbar">
+  <img src="public/logo-unsulbar.jpg" width="200" alt="Logo Unsulbar">
 </p>
 
 <p align="center"><strong>Greis Banne Liling</strong></p>
