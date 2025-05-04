@@ -12,17 +12,17 @@ class DaftaryukSeeder extends Seeder
     {
         // Tabel peran
         DB::table('peran')->insert([
-            ['id' => 1, 'nama' => 'admin'],
-            ['id' => 2, 'nama' => 'panitia'],
-            ['id' => 3, 'nama' => 'mahasiswa'],
+            ['id' => 1, 'Dewi' => 'admin'],
+            ['id' => 2, 'Andi' => 'panitia'],
+            ['id' => 3, 'Anggi' => 'mahasiswa'],
         ]);
 
         // Tabel pengguna (5 orang dengan kombinasi peran)
         DB::table('pengguna')->insert([
             [
-                'nama' => 'Admin Satu',
-                'email' => 'admin1@example.com',
-                'password' => Hash::make('password'),
+                'nama' => 'Surayandini',
+                'email' => 'andini@gmail.com',
+                'password' => Hash::make('Andin123'),
                 'peran_id' => 1,
                 'email_terverifikasi' => now(),
                 'remember_token' => null,
@@ -30,9 +30,9 @@ class DaftaryukSeeder extends Seeder
                 'updated_at' => now(),
             ],
             [
-                'nama' => 'Panitia Dua',
-                'email' => 'panitia2@example.com',
-                'password' => Hash::make('password'),
+                'nama' => 'Marko',
+                'email' => 'marko@gmail.com',
+                'password' => Hash::make('Marko13'),
                 'peran_id' => 2,
                 'email_terverifikasi' => now(),
                 'remember_token' => null,
@@ -40,9 +40,9 @@ class DaftaryukSeeder extends Seeder
                 'updated_at' => now(),
             ],
             [
-                'nama' => 'Mahasiswa Tiga',
-                'email' => 'mahasiswa3@example.com',
-                'password' => Hash::make('password'),
+                'nama' => 'Citra',
+                'email' => 'citra@gmail.com',
+                'password' => Hash::make('Citra10'),
                 'peran_id' => 3,
                 'email_terverifikasi' => now(),
                 'remember_token' => null,
@@ -50,9 +50,9 @@ class DaftaryukSeeder extends Seeder
                 'updated_at' => now(),
             ],
             [
-                'nama' => 'Mahasiswa Empat',
-                'email' => 'mahasiswa4@example.com',
-                'password' => Hash::make('password'),
+                'nama' => 'Farhan',
+                'email' => 'farhan@gmail.com',
+                'password' => Hash::make('Farhan20'),
                 'peran_id' => 3,
                 'email_terverifikasi' => now(),
                 'remember_token' => null,
@@ -60,9 +60,9 @@ class DaftaryukSeeder extends Seeder
                 'updated_at' => now(),
             ],
             [
-                'nama' => 'Mahasiswa Lima',
-                'email' => 'mahasiswa5@example.com',
-                'password' => Hash::make('password'),
+                'nama' => 'Wahyuni',
+                'email' => 'wahyuni@gmail.com',
+                'password' => Hash::make('Wahyuni15'),
                 'peran_id' => 3,
                 'email_terverifikasi' => now(),
                 'remember_token' => null,
