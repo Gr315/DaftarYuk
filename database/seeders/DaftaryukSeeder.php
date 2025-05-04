@@ -1,0 +1,101 @@
+<?php
+
+namespace Database\Seeders;
+
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Database\Seeder;
+
+class DaftaryukSeeder extends Seeder
+{
+
+    public function run(): void
+    {
+        // Tabel peran
+        DB::table('peran')->insert([
+            ['id' => 1, 'nama' => 'admin'],
+            ['id' => 2, 'nama' => 'panitia'],
+            ['id' => 3, 'nama' => 'mahasiswa'],
+        ]);
+
+        // Tabel pengguna (5 orang dengan kombinasi peran)
+        DB::table('pengguna')->insert([
+            [
+                'nama' => 'Admin Satu',
+                'email' => 'admin1@example.com',
+                'password' => Hash::make('password'),
+                'peran_id' => 1,
+                'email_terverifikasi' => now(),
+                'remember_token' => null,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'nama' => 'Panitia Dua',
+                'email' => 'panitia2@example.com',
+                'password' => Hash::make('password'),
+                'peran_id' => 2,
+                'email_terverifikasi' => now(),
+                'remember_token' => null,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'nama' => 'Mahasiswa Tiga',
+                'email' => 'mahasiswa3@example.com',
+                'password' => Hash::make('password'),
+                'peran_id' => 3,
+                'email_terverifikasi' => now(),
+                'remember_token' => null,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'nama' => 'Mahasiswa Empat',
+                'email' => 'mahasiswa4@example.com',
+                'password' => Hash::make('password'),
+                'peran_id' => 3,
+                'email_terverifikasi' => now(),
+                'remember_token' => null,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'nama' => 'Mahasiswa Lima',
+                'email' => 'mahasiswa5@example.com',
+                'password' => Hash::make('password'),
+                'peran_id' => 3,
+                'email_terverifikasi' => now(),
+                'remember_token' => null,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+        ]);
+
+        // Tabel kegiatan
+        DB::table('kegiatan')->insert([
+            ['nama' => 'Seminar Nasional', 'deskripsi' => 'Seminar besar', 'tanggal' => '2025-06-01', 'created_at' => now(), 'updated_at' => now()],
+            ['nama' => 'Workshop Laravel', 'deskripsi' => 'Belajar Laravel', 'tanggal' => '2025-06-02', 'created_at' => now(), 'updated_at' => now()],
+            ['nama' => 'Bakti Sosial', 'deskripsi' => 'Ke desa binaan', 'tanggal' => '2025-06-03', 'created_at' => now(), 'updated_at' => now()],
+            ['nama' => 'Expo Kampus', 'deskripsi' => 'Pameran UKM', 'tanggal' => '2025-06-04', 'created_at' => now(), 'updated_at' => now()],
+            ['nama' => 'Lomba UI/UX', 'deskripsi' => 'Desain aplikasi', 'tanggal' => '2025-06-05', 'created_at' => now(), 'updated_at' => now()],
+        ]);
+
+        // Tabel pendaftaran (dari mahasiswa id 3, 4, 5)
+        DB::table('pendaftaran')->insert([
+            ['pengguna_id' => 3, 'kegiatan_id' => 1, 'created_at' => now(), 'updated_at' => now()],
+            ['pengguna_id' => 3, 'kegiatan_id' => 2, 'created_at' => now(), 'updated_at' => now()],
+            ['pengguna_id' => 4, 'kegiatan_id' => 3, 'created_at' => now(), 'updated_at' => now()],
+            ['pengguna_id' => 5, 'kegiatan_id' => 4, 'created_at' => now(), 'updated_at' => now()],
+            ['pengguna_id' => 5, 'kegiatan_id' => 5, 'created_at' => now(), 'updated_at' => now()],
+        ]);
+
+        // Tabel kehadiran
+        DB::table('kehadiran')->insert([
+            ['pendaftaran_id' => 1, 'hadir' => true, 'created_at' => now(), 'updated_at' => now()],
+            ['pendaftaran_id' => 2, 'hadir' => false, 'created_at' => now(), 'updated_at' => now()],
+            ['pendaftaran_id' => 3, 'hadir' => true, 'created_at' => now(), 'updated_at' => now()],
+            ['pendaftaran_id' => 4, 'hadir' => false, 'created_at' => now(), 'updated_at' => now()],
+            ['pendaftaran_id' => 5, 'hadir' => true, 'created_at' => now(), 'updated_at' => now()],
+        ]);
+    }
+}
