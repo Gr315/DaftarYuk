@@ -1,7 +1,8 @@
 <?php
 
 namespace Database\Seeders;
-
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -12,9 +13,9 @@ class DaftaryukSeeder extends Seeder
     {
         // Tabel peran
         DB::table('peran')->insert([
-            ['id' => 1, 'nama' => 'admin'],
-            ['id' => 2, 'nama' => 'panitia'],
-            ['id' => 3, 'nama' => 'mahasiswa'],
+            ['id' => 1, 'nama' => 'admin', 'created_at' => now(), 'updated_at' => now()],
+            ['id' => 2, 'nama' => 'panitia', 'created_at' => now(), 'updated_at' => now()],
+            ['id' => 3, 'nama' => 'mahasiswa', 'created_at' => now(), 'updated_at' => now()],
         ]);
 
         // Tabel pengguna (5 orang dengan kombinasi peran)
@@ -22,7 +23,7 @@ class DaftaryukSeeder extends Seeder
             [
                 'nama' => 'Surayandini',
                 'email' => 'andini@gmail.com',
-                'password' => Hash::make('Andin123'),
+                'password' => Hash::make('pasword'),
                 'peran_id' => 1,
                 'email_terverifikasi' => now(),
                 'remember_token' => null,
@@ -32,7 +33,7 @@ class DaftaryukSeeder extends Seeder
             [
                 'nama' => 'Marko',
                 'email' => 'marko@gmail.com',
-                'password' => Hash::make('Marko13'),
+                'password' => Hash::make('pasword'),
                 'peran_id' => 2,
                 'email_terverifikasi' => now(),
                 'remember_token' => null,
@@ -42,7 +43,7 @@ class DaftaryukSeeder extends Seeder
             [
                 'nama' => 'Citra',
                 'email' => 'citra@gmail.com',
-                'password' => Hash::make('Citra10'),
+                'password' => Hash::make('pasword'),
                 'peran_id' => 3,
                 'email_terverifikasi' => now(),
                 'remember_token' => null,
@@ -52,7 +53,7 @@ class DaftaryukSeeder extends Seeder
             [
                 'nama' => 'Farhan',
                 'email' => 'farhan@gmail.com',
-                'password' => Hash::make('Farhan20'),
+                'password' => Hash::make('pasword'),
                 'peran_id' => 3,
                 'email_terverifikasi' => now(),
                 'remember_token' => null,
@@ -62,7 +63,7 @@ class DaftaryukSeeder extends Seeder
             [
                 'nama' => 'Wahyuni',
                 'email' => 'wahyuni@gmail.com',
-                'password' => Hash::make('Wahyuni15'),
+                'password' => Hash::make('pasword'),
                 'peran_id' => 3,
                 'email_terverifikasi' => now(),
                 'remember_token' => null,
