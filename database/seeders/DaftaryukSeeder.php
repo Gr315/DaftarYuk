@@ -12,9 +12,9 @@ class DaftaryukSeeder extends Seeder
     {
         // Tabel peran
         DB::table('peran')->insert([
-            ['id' => 1, 'Dewi' => 'admin'],
-            ['id' => 2, 'Andi' => 'panitia'],
-            ['id' => 3, 'Anggi' => 'mahasiswa'],
+            ['id' => 1, 'nama' => 'admin'],
+            ['id' => 2, 'nama' => 'panitia'],
+            ['id' => 3, 'nama' => 'mahasiswa'],
         ]);
 
         // Tabel pengguna (5 orang dengan kombinasi peran)
