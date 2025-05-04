@@ -1,17 +1,17 @@
-<p align="center">
-  <img src="https://laravel.com/img/logomark.min.svg" width="100" alt="Laravel Logo">
-</p>
-
-<h1 align="center">DaftarYuk</h1>
-<h3 align="center">Sistem Pendaftaran Kegiatan Mahasiswa</h3>
+<h1 align="center">DaftarYuk (Sistem Pendaftaran Kegiatan Mahasiswa)</h1>
 
 <p align="center">
-  <strong>Greis Banne Liling</strong> • D0223526 • 2025  
-  <br>
-  Dibuat dengan ❤️ menggunakan Laravel Web Framework
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/LOGO_UNIVERSITAS_SULAWESI_BARAT.png/480px-LOGO_UNIVERSITAS_SULAWESI_BARAT.png" width="200" alt="Logo Unsulbar">
 </p>
+
+<p align="center"><strong>Greis Banne Liling</strong></p>
+<p align="center">D0223526</p>
+<p align="center"><strong>Framework Web Based</strong></p>
+<p align="center">2025</p>
 
 ---
+
+
 ## 🎯 Role dan Fitur
 
 ### Admin
