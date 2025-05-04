@@ -1,12 +1,17 @@
-# DaftarYuk - Sistem Pendaftaran Kegiatan Mahasiswa
+<p align="center">
+  <img src="https://laravel.com/img/logomark.min.svg" width="100" alt="Laravel Logo">
+</p>
 
-## Greis Banne Liling  
-**NIM:** D0223526  
-**Framework:** Laravel  
-**Tahun:** 2025
+<h1 align="center">DaftarYuk</h1>
+<h3 align="center">Sistem Pendaftaran Kegiatan Mahasiswa</h3>
+
+<p align="center">
+  <strong>Greis Banne Liling</strong> • D0223526 • 2025  
+  <br>
+  Dibuat dengan ❤️ menggunakan Laravel Web Framework
+</p>
 
 ---
-
 ## 🎯 Role dan Fitur
 
 ### Admin
