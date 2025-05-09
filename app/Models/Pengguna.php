@@ -8,23 +8,25 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Pengguna extends Authenticatable
 {
-    use HasFactory, Notifiable;
+    protected $table = 'pengguna'; 
 
-    protected $table = 'pengguna';
+    protected $fillable = ['nama', 'email', 'password', 'peran_id'];
 
-    protected $fillable = [
-        'nama', 'email', 'password', 'peran_id'
-    ];
-
-    protected $hidden = ['password', 'remember_token'];
-
+    // Relasi dengan Peran
     public function peran()
     {
         return $this->belongsTo(Peran::class, 'peran_id');
     }
 
+    // Relasi dengan Pendaftaran
     public function pendaftaran()
     {
         return $this->hasMany(Pendaftaran::class, 'pengguna_id');
+    }
+
+    // Relasi dengan KegiatanPanitia
+    public function kegiatanPanitia()
+    {
+        return $this->hasMany(KegiatanPanitia::class, 'pengguna_id');
     }
 }
