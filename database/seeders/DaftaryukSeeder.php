@@ -81,6 +81,13 @@ class DaftaryukSeeder extends Seeder
             ['nama' => 'Lomba UI/UX', 'deskripsi' => 'Desain aplikasi', 'tanggal' => '2025-06-05', 'created_at' => now(), 'updated_at' => now()],
         ]);
 
+        // Tabel kegiatan_panitia 
+        DB::table('kegiatan_panitia')->insert([
+            ['kegiatan_id' => 1, 'pengguna_id' => 2, 'created_at' => now(), 'updated_at' => now()],
+            ['kegiatan_id' => 2, 'pengguna_id' => 2, 'created_at' => now(), 'updated_at' => now()],
+            ['kegiatan_id' => 3, 'pengguna_id' => 2, 'created_at' => now(), 'updated_at' => now()],
+        ]);
+
         // Tabel pendaftaran (dari mahasiswa id 3, 4, 5)
         DB::table('pendaftaran')->insert([
             ['pengguna_id' => 3, 'kegiatan_id' => 1, 'created_at' => now(), 'updated_at' => now()],
