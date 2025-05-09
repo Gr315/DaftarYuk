@@ -9,22 +9,17 @@ class Pendaftaran extends Model
 {
     use HasFactory;
 
-    protected $table = 'pendaftaran';
-
     protected $fillable = ['pengguna_id', 'kegiatan_id'];
 
+    // Relasi dengan Pengguna (belongsTo)
     public function pengguna()
     {
         return $this->belongsTo(Pengguna::class, 'pengguna_id');
     }
 
+    // Relasi dengan Kegiatan (belongsTo)
     public function kegiatan()
     {
         return $this->belongsTo(Kegiatan::class, 'kegiatan_id');
-    }
-
-    public function kehadiran()
-    {
-        return $this->hasOne(Kehadiran::class, 'pendaftaran_id');
     }
 }
