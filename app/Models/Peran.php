@@ -2,8 +2,8 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
 
 class Peran extends Model
 {
@@ -13,6 +13,7 @@ class Peran extends Model
 
     protected $fillable = ['nama'];
 
+    // Relasi dengan Pengguna
     public function pengguna()
     {
         return $this->hasMany(Pengguna::class, 'peran_id');
