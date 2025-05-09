@@ -6,7 +6,6 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-
     public function up(): void
     {
         Schema::create('daftaryuks', function (Blueprint $table) {
@@ -42,6 +41,16 @@ return new class extends Migration
             $table->timestamps();
         });
 
+        //  Tabel kegiatan_panitia 
+        Schema::create('kegiatan_panitia', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('kegiatan_id')->constrained('kegiatan')->onDelete('cascade');
+            $table->foreignId('pengguna_id')->constrained('pengguna')->onDelete('cascade');
+            $table->timestamps();
+
+            $table->unique(['kegiatan_id', 'pengguna_id']); // Mencegah duplikat
+        });
+
         // Tabel pendaftaran kegiatan
         Schema::create('pendaftaran', function (Blueprint $table) {
             $table->id();
@@ -63,6 +72,7 @@ return new class extends Migration
     {
         Schema::dropIfExists('kehadiran');
         Schema::dropIfExists('pendaftaran');
+        Schema::dropIfExists('kegiatan_panitia'); // harus dihapus dulu sebelum 'kegiatan'
         Schema::dropIfExists('kegiatan');
         Schema::dropIfExists('pengguna');
         Schema::dropIfExists('peran');
